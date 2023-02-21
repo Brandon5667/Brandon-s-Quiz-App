@@ -5,6 +5,7 @@ var scoreEl = document.getElementById('score');
 var score = 0;
 var availableQuestions = 0;
 var highScore = [];
+// array of objects for questions
 var questions = [
   {
     id: "0",
@@ -40,7 +41,7 @@ var questions = [
 
 
 var timer = 100;
-
+// function to start timer
 function startQuiz() {
   timer = 100
   availableQuestions = 0
@@ -70,7 +71,7 @@ function startQuiz() {
             
             var ul = document.createElement('ul');
 }
-
+// pull a new question and set of answers
 function getQuestion(i) {
   
     artBody.innerHTML = questions[i].question;
@@ -93,7 +94,7 @@ function getQuestion(i) {
               
               
 }
-
+// check if answer is correct and update score and timer accordingly
 function checker(x, y){
   if (availableQuestions <4) {
     if (x===y){
